@@ -7,4 +7,8 @@
     <string name="next">Next</string>
     <string name="background_image">Background Image</string>
     <string name="logo">LOGO</string>
+    <string name="beginner">BEGINNER</string>
+    <string name="baller">BALLER</string>
+    <string name="string_baller">string/baller</string>
+    <string name="i_am_a">I am a</string>
 </resources>
