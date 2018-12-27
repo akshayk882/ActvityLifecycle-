@@ -1,8 +1,8 @@
-package com.akshaykumbhar.actvitylifecycle
+package com.akshaykumbhar.actvitylifecycle.Controller
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.akshaykumbhar.actvitylifecycle.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity() {

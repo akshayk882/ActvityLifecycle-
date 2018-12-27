@@ -1,9 +1,8 @@
-package com.akshaykumbhar.actvitylifecycle
+package com.akshaykumbhar.actvitylifecycle.Controller
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import java.sql.ResultSetMetaData
 
 open class BaseActivity : AppCompatActivity() {
     val TAG = "Lifecycle"
