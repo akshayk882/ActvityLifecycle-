@@ -4,35 +4,35 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.akshaykumbhar.actvitylifecycle.Model.Player
 import com.akshaykumbhar.actvitylifecycle.R
+import com.akshaykumbhar.actvitylifecycle.Utility.PLAYER
 import kotlinx.android.synthetic.main.activity_skill.*
 
 class SkillActivity : BaseActivity() {
-    var league = ""
-    var skill= ""
+    lateinit var player : Player
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_skill)
-        league = intent.getStringExtra(KEY)
-        Toast.makeText(this, league, Toast.LENGTH_LONG).show()
+        player= intent.getParcelableExtra(PLAYER)
+        Toast.makeText(this, player.league, Toast.LENGTH_LONG).show()
 
     }
     fun ballerclk(view:View)
     {
         Beginnerbtn.isChecked = false
-        skill = "Baller"
+        player.skill = "Baller"
     }
     fun beginnerclk(view:View)
     {
         ballerbtn.isChecked = false
-        skill = "Beginner"
+        player.skill = "Beginner"
     }
     fun finishclk(view: View)
     {
-        if(skill != "") {
+        if(player.skill != "") {
             val finalIntent = Intent(this, FinalActivity::class.java)
-            finalIntent.putExtra(KEY,league)
-            finalIntent.putExtra(SKILL,skill)
+            finalIntent.putExtra(PLAYER,player)
             startActivity(finalIntent)
         }
         else
